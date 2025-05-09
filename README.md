@@ -1,38 +1,39 @@
-# PaperMind – iOS Document Organizer (Prototype v1.0) for ITEL315 - Elective iOS Development
+# **PaperMind v1.0 (Prototype)**  
+*ITEL315 – Elective iOS Development*
 
-**PaperMind** is a minimalist iOS application prototype built with SwiftUI, designed to help users digitize, organize, and sort paper documents using OCR and smart folder categorization. It allows quick scanning, auto-sorting, and lightweight offline access to documents—ideal for students, professionals, and anyone aiming to reduce paper clutter.
+**PaperMind** is a minimalist iOS app prototype built with **SwiftUI** to help users digitize and organize physical documents using OCR and automatic categorization. Users can scan or import papers, extract text with OCR, and let the app sort them into folders like Urgent, Later, and Trash—all stored locally with a clean, playful interface.
 
-> **Note**: This project is a learning prototype developed as part of an iOS development elective. While functional, it is not production-ready.
-
----
-
-## Features
-
-- Daily document scanning via camera or import  
-- Optical Character Recognition (OCR) to extract key text  
-- Auto-categorization into folders (e.g., Urgent, Later, Trash)  
-- Tap-to-preview document with detail overlay  
-- Swipe-to-delete or reassign document category  
-- Custom haptics and visual feedback for actions  
-- Local storage with persistent state using `UserDefaults`  
-- Animated background and minimalist UI with category color-coding  
-- Daily reminder notification to encourage consistent scanning  
-- Splash screen with logo animation  
+> **Note:** This is a **prototype-level project** developed for learning SwiftUI, exploring OCR features, and building functional offline-first file organization workflows.
 
 ---
 
-## Technology Stack
+## **Key Features**
 
-- **Swift / SwiftUI** – Modern, declarative UI  
-- **VisionKit / Vision** – OCR and image recognition  
-- **UserNotifications** – Daily scan reminders  
-- **UserDefaults** – Lightweight document persistence  
+- **Scan & Import:** Capture documents via camera or import from photo library  
+- **OCR-Powered Sorting:** Extracts key text using Vision OCR  
+- **Smart Categorization:** Automatically places documents into folders (Urgent, Later, Trash)  
+- **Tap-to-Zoom Preview:** View documents fullscreen with text overlay  
+- **Swipe Actions:** Reassign or delete documents with visual feedback  
+- **Haptics & Animation:** Feedback via Core Haptics and custom transitions  
+- **Local Storage:** Documents and categories persist using `UserDefaults`  
+- **Splash Screen:** Animated entry with logo scaling  
+- **Daily Scan Reminder:** Local notification to prompt regular use  
+- **Zen UI:** Color-coded folders, animated background, and minimalist layout  
+
+---
+
+## **Tech Stack**
+
+- **Swift / SwiftUI**  
+- **VisionKit / Vision Framework** – OCR and image processing  
+- **UserNotifications** – Daily local notifications  
+- **UserDefaults** – For document persistence  
 - **Core Haptics** – Haptic feedback on interactions  
-- **SF Symbols** – Iconography for category visuals  
+- **SF Symbols** – Icon-based category visuals  
 
 ---
 
-## Screenshots
+## **App Screenshots**
 
 <div align="center">
   <img src="" width="45%" />
@@ -50,62 +51,79 @@
 
 ---
 
-## Project Goals
+## **Project Objectives**
 
-- Explore real-time document scanning and OCR integration  
-- Build an intuitive file management UX in SwiftUI  
-- Practice structuring a small app using MVVM pattern  
-- Implement persistent lightweight data storage  
-- Design with user delight and clarity in mind  
+This prototype demonstrates:
+
+- OCR integration in a native iOS app  
+- Real-time scan + sort flow using MVVM  
+- Local-only document storage with persistent state  
+- Building delightful micro-interactions (haptics, animation)  
+- Designing an intuitive scanning interface in SwiftUI  
 
 ---
 
-## Installation
+## **Installation Instructions**
 
-1. Clone the repository:
+1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/papermind.git
    ```
+## **Installation**
 
 2. Open `PaperMind.xcodeproj` in Xcode  
-3. Run the app on a simulator or iOS device (iOS 17+ recommended)
+3. Run on a simulator or physical iOS device (**iOS 17+ recommended**)
 
 ---
 
-## Areas for Improvement
+## **Areas for Improvement (Toward Production Readiness)**
 
-### File Structure
+### 1. **File Organization**
 
-- Separate models, views, and view models into clearly labeled folders (`Models/`, `Views/`, `ViewModels/`)  
-- Modularize timer views, detail overlays, and reusable UI components
+- Some logic still resides in primary views  
+- **Recommended structure:** `Models/`, `ViewModels/`, `Views/`, `Resources/`  
+- Extract reusable components (e.g., document preview, category buttons)
 
-### State Management
+### 2. **State Management**
 
-- Move from `@State` and `@Binding` to `ObservableObject` and `@StateObject` for scalability and testability
+- Currently uses `@State` and `@Binding`  
+- Use `ObservableObject` and `@StateObject` for improved modularity and testability
 
-### Persistence
+### 3. **Data Persistence**
 
-- Replace `UserDefaults` with `CoreData` or `FileManager` for more robust data handling
+- `UserDefaults` is suitable for lightweight prototyping  
+- For scalability, consider `CoreData`, `FileManager`, or `SQLite`
 
-### Localization
+### 4. **OCR + AI Enhancements**
 
-- Refactor hardcoded strings into a constants file or `Localizable.strings`
+- Enhance categorization with NLP (e.g., keyword tagging)  
+- Add feedback loop to improve sorting accuracy over time
 
-### OCR Enhancements
+### 5. **Strings & Localization**
 
-- Extend current OCR implementation with NLP techniques for smarter auto-categorization
-
----
-
-## Documentation
-
-- `docs/UI_Flow_Diagram.png` – Overview of screen transitions  
-- `docs/Architecture_Overview.png` – High-level module structure  
-- `docs/DEV_SETUP.md` – Developer setup and known issues
+- Move hardcoded strings to `Localizable.strings` or a centralized `Constants.swift` file  
+- Enables localization and reduces redundancy
 
 ---
 
-## Author
+## **Daily Reminder Setup**
+
+- Sends one local notification daily to prompt scanning  
+- Triggered using `UNUserNotificationCenter`  
+- Requires notification permissions on first app launch  
+- Fully local — no server or cloud integration
+
+---
+
+## **Documentation**
+
+- **UI Flow Diagram** *(Note: Created using Eraser AI; may not be fully accurate)*  
+- **Architecture Overview**  
+- **Developer Setup Guide**
+
+---
+
+## **Author**
 
 Developed by **Eissxs**  
-*"WELP WELP"*
+*“When I wrote this code, only God and I understood what I did. Welp, now only God knows.”*
