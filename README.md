@@ -118,9 +118,9 @@ This prototype demonstrates:
 
 ## **Documentation**
 
-- **UI Flow Diagram** *(Note: Created using Eraser AI; may not be fully accurate)*  
-- **Architecture Overview**  
-- **Developer Setup Guide**
+- [**UI Flow Diagram**](docs/UI_Flow_Diagram.png) *(Note: Created using Eraser AI; not fully accurate)*  
+- [**Architecture Overview**](docs/Architecture_Overview.png)  
+- [**Developer Setup Guide**](docs/DEV_SETUP.md)
 
 ---
 
