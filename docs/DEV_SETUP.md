@@ -6,10 +6,10 @@ This guide provides instructions to set up and run the *PaperMind* SwiftUI proto
 
 ## System Requirements
 
-Xcode 15 or later  
-macOS Ventura or later  
-iOS Simulator (iOS 17 or newer recommended)  
-Apple Developer Account (only required for deployment to a physical device)
+- Xcode 15 or later  
+- macOS Ventura or later  
+- iOS Simulator (iOS 17 or newer recommended)  
+- Apple Developer Account (only required for deployment to a physical device)
 
 
 ---
