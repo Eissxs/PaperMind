@@ -1,37 +1,57 @@
-# **PaperMind v1.0 (Prototype)**  
+# **PaperMind v1.0**
+
+![Swift](https://img.shields.io/badge/Swift-5.0%2B-orange)
+![Platform](https://img.shields.io/badge/Platform-iOS%2017.0%2B-blue)
+![License](https://img.shields.io/badge/License-Apache--2.0-green)
+![Status](https://img.shields.io/badge/Status-Prototype-yellow)
+
 *ITEL315 – Elective iOS Development*
 
-**PaperMind** is a minimalist iOS app prototype built with **SwiftUI** to help users digitize and organize physical documents using OCR and automatic categorization. Users can scan or import papers, extract text with OCR, and let the app sort them into folders like Urgent, Later, and Trash—all stored locally with a clean, playful interface.
+PaperMind is a minimalist iOS app built with SwiftUI that helps users digitize and organize physical documents using OCR and automatic categorization. With features like document scanning, smart sorting, and intuitive gestures, PaperMind makes document management effortless and intuitive.
 
 > **Note:** This is a **prototype-level project** developed for learning SwiftUI, exploring OCR features, and building functional offline-first file organization workflows.
 
----
-
 ## **Key Features**
 
-- **Scan & Import:** Capture documents via camera or import from photo library  
-- **OCR-Powered Sorting:** Extracts key text using Vision OCR  
-- **Smart Categorization:** Automatically places documents into folders (Urgent, Later, Trash)  
-- **Tap-to-Zoom Preview:** View documents fullscreen with text overlay  
-- **Swipe Actions:** Reassign or delete documents with visual feedback  
-- **Haptics & Animation:** Feedback via Core Haptics and custom transitions  
-- **Local Storage:** Documents and categories persist using `UserDefaults`  
-- **Splash Screen:** Animated entry with logo scaling  
-- **Daily Scan Reminder:** Local notification to prompt regular use  
-- **Zen UI:** Color-coded folders, animated background, and minimalist layout  
+- **Scan & Import**
+  - Capture documents via camera
+  - Import from photo library
+  - Quick batch scanning
+  - Auto-adjusting contrast and brightness
 
----
+- **OCR-Powered Sorting**
+  - Extracts key text using Vision OCR
+  - Real-time text recognition
+  - Automatic metadata extraction
+  - Searchable document content
+
+- **Smart Categorization**
+  - Automatically sorts into folders (Urgent, Later, Trash)
+  - Custom category creation
+  - Visual category indicators
+  - AI-suggested sorting options
+
+- **Document Management**
+  - Tap-to-zoom document preview
+  - Text overlay with highlight options
+  - Swipe actions for reassignment
+  - Batch operations support
+
+- **User Experience**
+  - Clean, minimalist interface
+  - Haptic feedback via Core Haptics
+  - Smooth animations and transitions
+  - Dark mode support
+  - Daily scan reminders
 
 ## **Tech Stack**
 
-- **Swift / SwiftUI**  
-- **VisionKit / Vision Framework** – OCR and image processing  
-- **UserNotifications** – Daily local notifications  
-- **UserDefaults** – For document persistence  
-- **Core Haptics** – Haptic feedback on interactions  
-- **SF Symbols** – Icon-based category visuals  
-
----
+- **Framework:** SwiftUI
+- **OCR Processing:** VisionKit / Vision Framework
+- **Data Persistence:** UserDefaults (prototype)
+- **Notifications:** UserNotifications
+- **Tactile Feedback:** Core Haptics
+- **Design:** SF Symbols, Custom Color Palette
 
 ## **App Screenshots**
 
@@ -50,71 +70,87 @@
   <img src="https://github.com/user-attachments/assets/cdb23a33-6790-4bd8-932b-f2ab69c41b61" width="45%" />
 </div>
 
----
+## **Project Structure**
 
-## **Project Objectives**
+```
+PaperMind/
+├── Views/
+│   ├── DashboardView.swift
+│   ├── ScannerView.swift
+│   ├── DocumentListView.swift
+│   ├── DocumentDetailView.swift
+│   └── SettingsView.swift
+├── Models/
+│   ├── Document.swift
+│   └── Category.swift
+├── ViewModels/
+│   ├── ScannerViewModel.swift
+│   └── DocumentViewModel.swift
+├── Utilities/
+│   ├── OCRManager.swift
+│   └── NotificationManager.swift
+└── Assets.xcassets/
+```
 
-This prototype demonstrates:
+## **Requirements**
 
-- OCR integration in a native iOS app  
-- Real-time scan + sort flow using MVVM  
-- Local-only document storage with persistent state  
-- Building delightful micro-interactions (haptics, animation)  
-- Designing an intuitive scanning interface in SwiftUI  
+- iOS 17.0+
+- Xcode 15.0+
+- Swift 5.0+
 
----
+## **Installation**
 
-## **Installation Instructions**
-
-1. Clone the repository:  
+1. Clone the repository:
    ```bash
    git clone https://github.com/Eissxs/PaperMind.git
    ```
-## **Installation**
 
-2. Open `PaperMind.xcodeproj` in Xcode  
-3. Run on a simulator or physical iOS device (**iOS 17+ recommended**)
+2. Open `PaperMind.xcodeproj` in Xcode
 
----
+3. Build and run the project
 
-## **Areas for Improvement (Toward Production Readiness)**
+## **Features in Detail**
 
-### 1. **File Organization**
+### Document Scanning & Import
+- Camera-based document capture
+- Photo library import
+- Auto-edge detection
+- Perspective correction
+- Brightness/contrast enhancement
 
-- Some logic still resides in primary views  
-- **Recommended structure:** `Models/`, `ViewModels/`, `Views/`, `Resources/`  
-- Extract reusable components (e.g., document preview, category buttons)
+### OCR Processing
+- Text extraction using Vision framework
+- Keyword identification
+- Content-based categorization
+- Searchable document text
 
-### 2. **State Management**
+### Smart Organization
+- Automatic sorting algorithms
+- Custom category creation
+- Visual category indicators
+- Document reclassification
 
-- Currently uses `@State` and `@Binding`  
-- Use `ObservableObject` and `@StateObject` for improved modularity and testability
+### User Experience
+- Minimalist, distraction-free design
+- Intuitive swipe actions
+- Haptic feedback for interactions
+- Animated transitions
+- Dark mode compatibility
 
-### 3. **Data Persistence**
+## **Privacy Permissions**
 
-- `UserDefaults` is suitable for lightweight prototyping  
-- For scalability, consider `CoreData`, `FileManager`, or `SQLite`
+The app requires the following permissions:
+- Camera (for document scanning)
+- Photo Library (for importing documents)
+- Notifications (for daily reminders)
 
-### 4. **OCR + AI Enhancements**
+## **Contributing**
 
-- Enhance categorization with NLP (e.g., keyword tagging)  
-- Add feedback loop to improve sorting accuracy over time
+Feel free to submit issues and enhancement requests!
 
-### 5. **Strings & Localization**
+## **License**
 
-- Move hardcoded strings to `Localizable.strings` or a centralized `Constants.swift` file  
-- Enables localization and reduces redundancy
-
----
-
-## **Daily Reminder Setup**
-
-- Sends one local notification daily to prompt scanning  
-- Triggered using `UNUserNotificationCenter`  
-- Requires notification permissions on first app launch  
-- Fully local — no server or cloud integration
-
----
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## **Documentation**
 
@@ -122,9 +158,56 @@ This prototype demonstrates:
 - [**Architecture Overview**](docs/Architecture_Overview.png)  
 - [**Developer Setup Guide**](docs/DEV_SETUP.md)
 
----
+## **Areas for Improvement (Toward Production Readiness)**
+
+### Architecture & Code Quality
+- Implement comprehensive unit tests and UI tests
+- Add CI/CD pipeline for automated testing and deployment
+- Enhance error handling and logging mechanisms
+- Implement proper dependency injection
+- Add comprehensive code documentation
+- Migrate from `UserDefaults` to CoreData for robust persistence
+
+### Security
+- Implement secure document storage encryption
+- Add input validation and sanitization
+- Implement proper SSL pinning for future API integrations
+- Add app state encryption for sensitive data
+
+### Performance
+- Optimize OCR processing pipeline
+- Implement proper caching mechanisms
+- Add performance monitoring and analytics
+- Optimize document storage and retrieval
+
+### Features & UX
+- Add document backup and restore functionality
+- Implement user accounts and cloud sync capabilities
+- Enhance text recognition accuracy
+- Improve accessibility features
+- Add localization support for multiple languages
+- Implement advanced document categorization algorithms
+- Add document editing and annotation capabilities
+
+### Infrastructure
+- Set up proper monitoring and crash reporting
+- Implement analytics for user behavior tracking
+- Add proper versioning and update mechanism
+- Prepare for App Store submission requirements
 
 ## **Author**
 
-Developed by **Eissxs**  
-*“When I wrote this code, only God and I understood what I did. Welp, now only God knows.”*
+Developed by **Eissxs**
+
+## **Acknowledgments**
+
+- Apple SwiftUI Framework
+- Vision Framework
+- VisionKit
+- UserNotifications Framework
+
+---
+
+*"Digitize, organize, and declutter your paper life with PaperMind!"* 
+
+---
