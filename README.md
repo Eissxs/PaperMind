@@ -50,6 +50,7 @@ PaperMind is a minimalist iOS app built with SwiftUI that helps users digitize a
 - **OCR Processing:** VisionKit / Vision Framework
 - **Data Persistence:** UserDefaults (prototype)
 - **Notifications:** UserNotifications
+- **Architecture Pattern:** MVVM
 - **Tactile Feedback:** Core Haptics
 - **Design:** SF Symbols, Custom Color Palette
 
