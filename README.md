@@ -74,22 +74,27 @@ PaperMind is a minimalist iOS app built with SwiftUI that helps users digitize a
 
 ```
 PaperMind/
-├── Views/
-│   ├── DashboardView.swift
-│   ├── ScannerView.swift
-│   ├── DocumentListView.swift
-│   ├── DocumentDetailView.swift
-│   └── SettingsView.swift
 ├── Models/
-│   ├── Document.swift
-│   └── Category.swift
+│   └── ScannedDocument.swift
 ├── ViewModels/
-│   ├── ScannerViewModel.swift
-│   └── DocumentViewModel.swift
-├── Utilities/
-│   ├── OCRManager.swift
-│   └── NotificationManager.swift
-└── Assets.xcassets/
+│   └── DocumentScannerViewModel.swift
+├── Utils/
+│   └── OCRProcessor.swift
+├── Resources/
+│   └── CategoryColor.swift
+├── Views/
+│   ├── CameraImagePicker.swift
+│   ├── DocumentCardView.swift
+│   ├── DocumentDetailView.swift
+│   ├── FolderCard.swift
+│   ├── FolderView.swift
+│   ├── HomeView.swift
+│   ├── ImagePicker.swift
+│   ├── NotificationManager.swift
+│   ├── SplashView.swift
+│   └── ZoomableImageView.swift
+├── Assets.xcassets/
+└── PaperMindApp.swift
 ```
 
 ## **Requirements**
