@@ -57,18 +57,17 @@ PaperMind is a minimalist iOS app built with SwiftUI that helps users digitize a
 ## **App Screenshots**
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/88871e2e-27de-4515-aafd-f30f3c3a8d67" width="45%" />
-  <img src="https://github.com/user-attachments/assets/21778fad-3678-420c-8ab2-e0488fe63373" width="45%" />
+  <img src="https://github.com/user-attachments/assets/c3211df6-3407-43f4-9ae5-58d22bc808f7" width="45%" />
+  <img src="https://github.com/user-attachments/assets/91d27cd9-e593-4209-b14e-0cdba6929cba" width="45%" />
 </div>
 <br/>
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/470d47cd-d72f-47e8-b0eb-1ad1a2282ee6" width="45%" />
-  <img src="https://github.com/user-attachments/assets/717bb79f-32b7-4eaa-8608-2cf26e5c37d7" width="45%" />
+  <img src="https://github.com/user-attachments/assets/00fbccdc-69a8-4048-87f7-b7fd4297ea86" width="45%" />
+  <img src="https://github.com/user-attachments/assets/2d5a218b-38c8-432e-893d-c3d6abde6b45" width="45%" />
 </div>
 <br/>
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/063cd362-01ce-444e-a13b-74412a76aa8b" width="45%"/>
-  <img src="https://github.com/user-attachments/assets/cdb23a33-6790-4bd8-932b-f2ab69c41b61" width="45%" />
+  <img src="https://github.com/user-attachments/assets/18c8790a-3cef-4c3a-89bb-5ed5d0552e74" width="45%"/>
 </div>
 
 ## **Project Structure**
